@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<title>MultInvest</title>
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="https://i.icomoon.io/public/temp/9acb85e07f/UntitledProject/style.css">
+			<style>
+				.icon-eye:before {
+				  content: "\e9ce";
+				  font-size:1.5em;
+				  cursor:pointer;
+				  margin:8px;
+				  line-height:35px;
+				}
+				.icon-eye-blocked:before {
+				  content: "\e9d1";
+				  font-size:1.5em;
+				  color:#888;
+				  cursor:pointer;
+				  margin:8px;
+				  line-height:35px;
+				}
+			</style>
+		</head>
+		<body>	
+			<input type="password" name="senha" id="senha" style="float:left;padding:6px;" />
+			<div id="ico"><span  onclick="pass();" class="icon-eye-blocked"></span></div>
+
+			<script>
+			function pass(){
+			var p = document.getElementById("senha").type;
+				
+				if(p == "password"){
+				document.getElementById("senha").type="text";
+				document.getElementById("ico").innerHTML="<span  onclick='pass();' class='icon-eye'></span>";
+				}
+				else{
+				document.getElementById("senha").type="password";
+				document.getElementById("ico").innerHTML="<span  onclick='pass();' class='icon-eye-blocked'></span>";
+				}
+			}
+			</script>
+
+
+
+		</body>
+	</html>
